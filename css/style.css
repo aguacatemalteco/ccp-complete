@@ -1,0 +1,593 @@
+/*********************************
+Mobile view
+**********************************/
+
+/* Basic styling of elements */
+body {
+    font-family: Verdana, Arial, Times, sans-serif;
+    font-size: 85%;
+    line-height: 150%;
+    margin: 5%;
+    color: #320e3b;
+    background-color: #d1b7d8;
+}
+
+a {
+    color: #60014f;
+}
+
+a:visited {
+    color:#320e3b;
+}
+
+img {
+    border: 2px solid #320e3b;
+}
+
+h1 {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #5b3d62;
+    padding: 3%;
+    border: 3px solid #320e3b;
+    border-radius: 15px;
+    text-align: center;
+}
+
+video{
+    padding-left: 2.5%;
+}
+
+h2 {
+    display: inline-block;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #320e3b;
+    padding: 3%;
+    border: 3px solid #320e3b;
+    border-radius: 15px;
+    text-align: center;
+}
+
+h3 {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 125%;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3f6455;
+    padding: 3%;
+    border: 3px solid #3f6455;
+    border-radius: 15px;
+    text-align: center;
+}
+
+p {
+    margin: 2%;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+footer {
+    font-size: 10%;
+}
+
+/* Skip to main styling */
+a.skip {
+    position: absolute;
+    top: -40px;
+    padding: 6px;
+    font-size: 150%;
+    color: #ffffff;
+    background-color: #320e3b;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+a.skip:focus {
+    position: absolute;
+    top: 20px;
+}
+
+/* Navigation styling: Styles the nav with flex and styles the links within it; the "active" page will be displayed in a different color with a dashed border and bolded text.*/
+
+nav {
+    margin: 0 0 3% 0;
+}
+
+nav li {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: normal;
+    width: 21%;
+    padding: 2% 0;
+    margin: 0 1.5%;
+    border: 1.5px solid #3f6455;
+    background-color: #ceffec;
+    border-radius: 15px;
+    text-align: center;
+}
+
+li a {
+    color: #3f6455;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #3f6455;
+    border: 3px dashed #ceffec;
+}
+
+.active a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.flex-container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Styling for the "jump to content" links */
+.flex-container-jump {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    align-content: center;
+}
+
+.jump {
+    border: 0;
+    background: #320e3b;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #ceffec;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 2% 0;
+    padding: 12px 20px;
+    width: 80%;
+    transition: all .1s linear;
+    font-family: Verdana, Arial, Times, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.jump:active {
+    box-shadow: 0 2px 0 #ceffec;
+    transform: translateY(3px);
+}
+
+.jump:visited {
+    color:#ffffff;
+}
+
+/* Grid styling for pets */
+
+.pet {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    border: 2px solid #320e3b;
+    border-radius: 15px;
+    margin: 5% 2%;
+    padding: 2%;
+    width: 90%;
+    max-height: fit-content;
+    background-color: #ab8db4;
+    gap: 2%;
+    justify-content: center;
+}
+
+.pet h2 {
+    grid-column: 1/-1;
+}
+
+.pet img {
+    width: 100%;
+    grid-column: 1/-1;
+}
+
+.bio {
+    grid-column: 1/2;
+    overflow: scroll;
+}
+
+.likes {
+    grid-area: 3/2/4/-1;
+    background-color: #ceffec;
+    padding: 5%;
+    border: 2px solid #3f6455;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.likes ul {
+    padding: 5% 0 0 20%;
+}
+
+/* Grid styling for recipes */
+
+.recipe {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    border: 2px solid #320e3b;
+    border-radius: 15px;
+    margin: 5% 2%;
+    padding: 2%;
+    width: 90%;
+    max-height: fit-content;
+    background-color: #ab8db4;
+    gap: 2%;
+    justify-content: center;
+}
+
+.recipe h2 {
+    grid-column: 1/-1;
+}
+
+.recipe img {
+    width: 100%;
+    grid-column: 1/-1;
+}
+
+.description h3 {
+    background-color: #320e3b;
+    border: 3px solid #320e3b;
+}
+
+.ingredients {
+    background-color: #ceffec;
+    border: 2px solid #3f6455;
+    border-radius: 15px;
+    padding: 5%;
+    text-align: left;
+}
+
+.ingredients ul {
+    padding: 5% 0 0 15%;
+}
+
+.preparation {
+    grid-column: 1/-1;
+    text-align: left;
+    overflow: scroll;
+}
+
+.preparation ol {
+    padding-left: 10%;
+}
+
+.preparation h3 {
+    background-color: #320e3b;
+    border: 3px solid #320e3b;
+}
+
+/* Grid styling for travel destinations */
+
+.destination {
+    display: grid;
+    grid-template-columns: 96%;
+    border: 2px solid #320e3b;
+    border-radius: 15px;
+    margin: 5% 2%;
+    padding: 2%;
+    width: 90%;
+    max-height: fit-content;
+    background-color: #ab8db4;
+    gap: 2%;
+    justify-content: center;
+}
+
+.destination h2 {
+    grid-column: 1/-1;
+}
+
+.destination img {
+    width: 100%;
+    grid-column: 1/-1;
+}
+
+.highlights {
+    grid-area: 3/1/4/-1;
+    background-color: #ceffec;
+    padding: 3.5%;
+    border: 2px solid #3f6455;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.highlights ul {
+    padding: 2.5% 0 0 10%;
+}
+
+.travel-notes {
+    overflow: scroll;
+}
+
+.travel-notes h3 {
+    background-color: #320e3b;
+    border-color: #320e3b;
+}
+
+/*********************************
+Tablet view
+**********************************/
+
+@media screen and (min-width:800px){
+
+    /* Create two-column display for tablet view*/
+    .container {
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 48% 48%;
+        justify-content: space-evenly;
+        justify-items: center;
+    }
+
+    /* Adjust display of jump to content links */
+    .flex-container-jump {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .jump {
+        width: 25%;
+    }
+
+    /* Adjust default pet grid layout, including wider display for last pet on the page*/
+
+    .pet {
+        gap: 1% 2%;
+    }
+
+    .likes {
+        grid-area: 3/1/4/-1;
+    }
+
+    .bio {
+        grid-column: 1/-1;
+    }
+
+    .pet:last-child {
+        grid-column: 1/-1;
+    }
+
+    .pet:last-child img {
+        grid-column: 1/2;
+    }
+
+    .pet:last-child .likes {
+        grid-area: 2/2/3/-1;
+    }
+
+    .pet:last-child p {
+        grid-column: 1/-1;
+    }
+
+    .pet:last-child p:last-of-type {
+        grid-row: 4/1/5/-1;
+    }
+
+    /* Adjust default recipe grid layout, including wider display for last recipe on the page*/
+    .recipe {
+        gap: 1% 2%;
+    }
+
+    .description, .ingredients, .recipe:last-child {
+        grid-column: 1/-1;
+    }
+
+    .recipe:last-child .ingredients {
+        grid-area: 3/2/7/-1;
+    }
+
+    .recipe:last-child .description {
+        grid-area: 3/1/4/2;
+    }
+
+    .recipe:last-child .preparation {
+        grid-area: 4/1/5/2;
+    }
+
+     /* Adjust default destination grid layout, including wider display for last destination on the page*/
+
+    .destination {
+        gap: 1% 2%;
+    }
+
+    .destination:last-child {
+        grid-column: 1/-1;
+        grid-template-columns: 48% 48%;
+    }
+
+    .destination:last-child .highlights {
+        grid-area: 3/2/4/-1;
+    }
+
+    .destination:last-child .travel-notes {
+        grid-area: 3/1/4/2;
+    }
+
+}
+
+/*********************************
+Desktop view – for wider displays
+**********************************/
+
+@media screen and (min-width:1024px){
+
+     /* Increase font size for wider displays*/
+    body {
+        font-size: 100%;
+    }
+
+     /* Implement grids to allow for sticky navigation on the side of the page, and move main content to the right of this*/
+    .desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: start;
+    }
+
+    .header-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+        row-gap: 2.5%;
+        position: sticky;
+        top: 25px;
+    }
+
+    header > h1 {
+        grid-area: 1/1/2/-1;
+    }
+
+    h1 {
+        padding: 10%;
+        font-size: 250%;
+        line-height: 100%;
+    }
+
+    .flex-container-nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        flex-basis: 80px;
+        margin: 2.5% 0;
+        width: 80%;
+        font-size: 200%;
+        line-height: 250%;
+        padding: 0 0;
+    }
+
+    main {
+        grid-area: 1/2/2/-1;
+    }
+
+     /* Adjust styling of "jump to content" links so they don't flex and remain as a sticky pseudo-navigation bar at the top*/
+    .flex-container-jump {
+        justify-content: space-around;
+        background-color: #d1b7d8;
+        position: sticky;
+        top: 0px;
+        flex-wrap: nowrap;
+    }
+
+    .jump {
+        width: 15%;
+        line-height: 100%;
+    }
+
+     /* Adjust default pet grid layout, going back to displaying one pet at a time on screen but with more effective use of the space provided with a wider view*/
+    .pet, .pet:last-child {
+        grid-column: 1/-1;
+        margin: 2%;
+    }
+
+    .pet img {
+        grid-column: 1/2;
+    }
+
+    .likes, .pet:last-child .likes {
+        grid-area: 2/2/3/-1;
+    }
+
+    .likes ul {
+        padding: 5% 0 0 10%;
+        font-size: 125%;
+        line-height: 200%;
+        font-weight: 600;
+    }
+
+    /* Adjust default recipe grid layout, going back to displaying one recipe at a time on screen but with more effective use of the space provided with a wider view*/
+    .recipe, .recipe:last-child {
+        grid-column: 1/-1;
+        margin: 2%;
+    }
+
+    .recipe img, .description, .recipe:last-child .description {
+        grid-column: 1/2;
+    }
+
+    .ingredients, .recipe:last-child .ingredients {
+        grid-area: 2/2/4/-1;
+    }
+
+    .ingredients ul {
+        padding: 5% 0 0 10%;
+        font-size: 115%;
+        line-height: 200%;
+    }
+
+    .preparation, .recipe:last-child .preparation {
+        grid-column: 1/-1;
+    }
+
+    .preparation ol {
+        padding-left: 5%;
+        line-height: 200%;
+    }
+
+    /* Adjust default destination grid layout, going back to displaying one destination at a time on screen but with more effective use of the space provided with a wider view*/
+
+    .destination, .destination:last-child {
+        grid-template-columns: 48% 48%;
+        grid-column: 1/-1;
+        margin: 2%;
+    }
+
+    .destination img {
+        grid-column: 1/2;
+    }
+
+    .highlights, .destination:last-child .highlights {
+        grid-area: 2/2/3/3;
+    }
+
+    .highlights ul {
+        padding: 5% 0 0 10%;
+        font-size: 125%;
+        line-height: 200%;
+        font-weight: 600;
+    }
+
+    .travel-notes, .destination:last-child .travel-notes {
+        grid-column: 1/-1;
+    }
+}
+
+/*********************************
+Reduced motion
+**********************************/
+
+/* Removes movement of "skip to main" link and "button-like" animations for "jump to content" links for users with reduced-motion preferences turned on.*/
+@media screen and (prefers-reduced-motion: reduce) {
+    a.skip, .jump {
+        transition: none;
+      }
+
+    .jump:active {
+        box-shadow: 0 5px 0 #ceffec;
+        transform: none;
+    }
+
+}

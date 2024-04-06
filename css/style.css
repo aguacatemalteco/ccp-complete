@@ -383,7 +383,7 @@ Tablet view
     }
 
     .pet:last-child p:last-of-type {
-        grid-row: 4/1/5/-1;
+        grid-area: 4/1/5/-1;
     }
 
     /* Adjust default recipe grid layout, including wider display for last recipe on the page*/
